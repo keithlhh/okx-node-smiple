@@ -24,7 +24,11 @@ app.get('/', (req, res) => {
   res.send('Hello, HTTPS!');
 });
 
+
+
 // 创建 HTTPS 服务器
 https.createServer(options, app).listen(port, () => {
   console.log(`HTTPS Server is running at https://localhost:${port}`);
 });
+
+https.get("https://www.okx.com/priapi/v5/ecotrade/public/history-positions?limit=5&uniqueName=540D011FDACCB47A")
